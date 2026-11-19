@@ -1,0 +1,9 @@
+project: savantenvs/utfcpp
+target: utf32-encode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/utf32-encode/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_utf32_encode
+    libfuzzer: true
+    timeout: 5

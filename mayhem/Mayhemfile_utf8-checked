@@ -1,0 +1,9 @@
+project: savantenvs/utfcpp
+target: utf8-checked
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/utf8-checked/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_utf8_checked
+    libfuzzer: true
+    timeout: 5

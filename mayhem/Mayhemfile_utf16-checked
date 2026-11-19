@@ -1,0 +1,9 @@
+project: savantenvs/utfcpp
+target: utf16-checked
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/utf16-checked/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_utf16_checked
+    libfuzzer: true
+    timeout: 5
